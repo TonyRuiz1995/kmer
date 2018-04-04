@@ -9,10 +9,10 @@ end=$(date +%s%N | cut -b1-13)
 
 echo "$start"
 echo "$end"
+total="$(($end -$start))"
 
-
-((total = end - start))
-
+echo "$total"
 #echo start: $start >>data.txt
 #echo end: $end >> data.txt
-echo -e $total "\t" >> data.txt
+#echo $total "\t" >> data.txt
+echo $total "\t" >> data_rand.txt
